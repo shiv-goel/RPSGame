@@ -3,7 +3,7 @@ This is a python application to play the game of Rock, Paper and Scissors agains
 also makes a choice for the computer. Then the game is played and the winner is decided according to the rules of the game. At the end of the game, player
 gets an option to choose whether to continue playing or to exit from the game.
 
-##Playing the game
+## Playing the game
 Run the code and enter your choice when prompted to do so.
 ```
 $ python3 assign.py
@@ -31,7 +31,7 @@ Computer wins:  0
 Draws:  1
 Do you want to play again (Y/N): 
 ```
-If you enter `Y/y`, the game continues and the above steps are repeated. If you enter `N/n', the game stops and the final score is displayed.
+If you enter `Y/y`, the game continues and the above steps are repeated. If you enter `N/n`, the game stops and the final score is displayed.
 ```
 Final Status:
 Games played:  1
