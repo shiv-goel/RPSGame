@@ -4,14 +4,15 @@ from enum import IntEnum
 
 class Convertor(IntEnum):
     """Converts the choices made to more readable format"""
-    Rock = 1
-    Paper = 2
+    Rock     = 1
+    Paper    = 2
     Scissors = 3
 
 class Game():
     """Runs the whole game"""
     def __init__(self,verbose):
-        """Displays the welcome message and initializes the game parameters"""
+        """Displays the welcome message and initializes the game parameters
+        Parameter: verbose - Boolean which decides whether to print information to console or not"""
         self.verbose = verbose
         if self.verbose == True:
             print("Let's play Rock, Paper and Scissors")
@@ -25,7 +26,7 @@ class Game():
         """Prints the current game status"""
         if self.verbose == True:
             print("Games played: ", self.player_wins + self.comp_wins + self.draws)
-            print("Player wins!!!: ", self.player_wins)
+            print("Player wins: ", self.player_wins)
             print("Computer wins: ", self.comp_wins)
             print("Draws: ", self.draws)
 
@@ -64,7 +65,7 @@ class Game():
             self.comp_wins += 1
 
 
-    def player_choice(self):        #Getting the choice of user
+    def player_choice(self):     
         """Asks the player to enter his choice and checks if the choice made is valid"""
         if self.verbose == True:
             print("Enter your choice:\n1 for rock \n2 for paper \n3 for scissors\n")
@@ -79,15 +80,11 @@ class Game():
 
             return sel
 
-    def comp_choice(self):          #Getting the choice of computer
+    def comp_choice(self):       
         """Computes the choice of computer"""
         if self.verbose == True:
             print("Computer is making a move...")
-        time.sleep(1)
-        sel = random.randint(1,3)
-        if self.verbose == True:
-            print("Computer has chosen",Convertor(sel).name)
-            print("=======================")
+            sel = random.randint(1,3)
 
         return sel
 
@@ -95,6 +92,8 @@ class Game():
         """Calls the functions to store the choices made and sends them to the evaluate function"""
         p_sel = self.player_choice()
         c_sel = self.comp_choice()
+        print("You :",Convertor(p_sel).name,"Computer :",Convertor(c_sel))
+        print("=======================")
         time.sleep(1)
         self.eval(p_sel, c_sel)
 
@@ -115,7 +114,6 @@ class Game():
 
 
 if __name__=="__main__":
-    """Calls an object of the class Game and runs the game"""
     game = Game(True)
     game.run()
     
