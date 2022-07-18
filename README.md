@@ -20,16 +20,14 @@ Your choice : 1
 After entering your choice, the computer makes a move and the winner(or draw) is decided. After that, you get an option whether to continue playing or exit
 the game.
 ```
-You have chosen Rock
 =======================
-Computer is making a move...
-Computer has chosen Rock
+You : Rock | Computer : Paper
 =======================
-It is a draw!!!
+Computer wins!!!
 Games played:  1
-Player wins!!!:  0
-Computer wins:  0
-Draws:  1
+Player wins:  0
+Computer wins:  1
+Draws:  0
 Do you want to play again (Y/N): 
 ```
 If you enter `Y/y`, the game continues and the above steps are repeated. If you enter `N/n`, the game stops and the final score is displayed.
