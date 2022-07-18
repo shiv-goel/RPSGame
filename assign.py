@@ -71,19 +71,16 @@ class Game():
             print("Enter your choice:\n1 for rock \n2 for paper \n3 for scissors\n")
 
             sel = int(input("Your choice : "))
+            print("=======================")
+            time.sleep(1)
             while sel < 1 or sel > 3:
                 sel = int(input("Err! Enter a valid choice: "))
-
-            if self.verbose == True:
-                print("You have chosen", Convertor(sel).name)
-                print("=======================")
 
             return sel
 
     def comp_choice(self):       
         """Computes the choice of computer"""
         if self.verbose == True:
-            print("Computer is making a move...")
             sel = random.randint(1,3)
 
         return sel
@@ -92,7 +89,7 @@ class Game():
         """Calls the functions to store the choices made and sends them to the evaluate function"""
         p_sel = self.player_choice()
         c_sel = self.comp_choice()
-        print("You :",Convertor(p_sel).name,"Computer :",Convertor(c_sel))
+        print("You :",Convertor(p_sel).name,"| Computer :",Convertor(c_sel).name)
         print("=======================")
         time.sleep(1)
         self.eval(p_sel, c_sel)
