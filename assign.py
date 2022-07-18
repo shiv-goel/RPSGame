@@ -3,12 +3,15 @@ import time
 from enum import IntEnum
 
 class Convertor(IntEnum):
+    """Converts the choices made to more readable format"""
     Rock = 1
     Paper = 2
     Scissors = 3
 
 class Game():
+    """Runs the whole game"""
     def __init__(self,verbose):
+        """Displays the welcome message and initializes the game parameters"""
         self.verbose = verbose
         if self.verbose == True:
             print("Let's play Rock, Paper and Scissors")
@@ -19,6 +22,7 @@ class Game():
         self.draws       = 0
 
     def printStatus(self):
+        """Prints the current game status"""
         if self.verbose == True:
             print("Games played: ", self.player_wins + self.comp_wins + self.draws)
             print("Player wins!!!: ", self.player_wins)
@@ -26,6 +30,7 @@ class Game():
             print("Draws: ", self.draws)
 
     def eval(self, p_sel, c_sel):
+        """Evaluates the winner of the game based on the choice made by the player and the computer"""
         who_wins = -1
         if p_sel == c_sel:
             who_wins = 0
@@ -60,6 +65,7 @@ class Game():
 
 
     def player_choice(self):        #Getting the choice of user
+        """Asks the player to enter his choice and checks if the choice made is valid"""
         if self.verbose == True:
             print("Enter your choice:\n1 for rock \n2 for paper \n3 for scissors\n")
 
@@ -74,6 +80,7 @@ class Game():
             return sel
 
     def comp_choice(self):          #Getting the choice of computer
+        """Computes the choice of computer"""
         if self.verbose == True:
             print("Computer is making a move...")
         time.sleep(1)
@@ -85,12 +92,14 @@ class Game():
         return sel
 
     def playMatch(self):
+        """Calls the functions to store the choices made and sends them to the evaluate function"""
         p_sel = self.player_choice()
         c_sel = self.comp_choice()
         time.sleep(1)
         self.eval(p_sel, c_sel)
 
     def run(self):
+        """Plays the game repeatedly until the player doesn't want to play anymore"""
         if self.verbose == True:   
             while True:
                 self.playMatch()
@@ -106,6 +115,7 @@ class Game():
 
 
 if __name__=="__main__":
+    """Calls an object of the class Game and runs the game"""
     game = Game(True)
     game.run()
     

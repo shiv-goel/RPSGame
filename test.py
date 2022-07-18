@@ -3,12 +3,14 @@ import unittest
 
 class GameTest(unittest.TestCase):
     def test_initialization(self):
+        """Tests whether the game parameters have been initialized correctly"""
         game = assign.Game(False)
         self.assertEqual(game.player_wins, 0)
         self.assertEqual(game.comp_wins,0)
         self.assertEqual(game.draws,0)
 
     def test_eval(self):
+        """Tests the correctness of all the test cases possible in the game"""
         game = assign.Game(False)
 
         #Both the player and computer made the same choice
