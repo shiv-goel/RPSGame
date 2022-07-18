@@ -3,8 +3,9 @@ This is a python application to play the game of Rock, Paper and Scissors agains
 also makes a choice for the computer. Then the game is played and the winner is decided according to the rules of the game. At the end of the game, player
 gets an option to choose whether to continue playing or to exit from the game.
 
+To check the correctness of algorithm, the application uses `unittest` module to run tests for all the possible testcases.
 ## Playing the game
-Run the code and enter your choice when prompted to do so.
+Run the `assign.py` and enter your choice when prompted to do so.
 ```
 $ python3 assign.py
 Let's play Rock, Paper and Scissors
@@ -39,3 +40,12 @@ Player wins!!!:  0
 Computer wins:  0
 Draws:  1
 ```
+Run the `test.py` file to run the tests.
+```
+$ python3 test.py
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+OK
+'''
