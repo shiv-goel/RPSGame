@@ -34,7 +34,7 @@ If you enter `Y/y`, the game continues and the above steps are repeated. If you 
 ```
 Final Status:
 Games played:  1
-Player wins!!!:  0
+Player wins:  0
 Computer wins:  0
 Draws:  1
 ```
